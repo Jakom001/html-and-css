@@ -1,4 +1,3 @@
-Sure! Below are notes on HTML and CSS covering the topics you've mentioned:
 
 ### HTML Notes
 
@@ -97,4 +96,4 @@ CSS can be applied in three ways:
    </head>
    ```
 
-By using these notes, you should have a basic understanding of HTML and CSS. Happy coding!
+
