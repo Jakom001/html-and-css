@@ -483,3 +483,210 @@ Here’s a full example demonstrating different uses of images:
 </html>
 ```
 
+
+### HTML Tables
+HTML tables are used to display data in a tabular format using rows and columns. The main elements involved in creating tables are:
+
+- `<table>`: This tag defines the table.
+- `<tr>` (table row): This tag defines a row in the table.
+- `<th>` (table header): This tag defines a header cell in the table.
+- `<td>` (table data): This tag defines a standard cell in the table.
+
+Example:
+```html
+<table>
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+  </tr>
+  <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+</table>
+```
+
+### HTML Lists
+HTML provides two types of lists: ordered and unordered.
+
+- Ordered List (`<ol>`): This list is used when the items have a specific order and is usually displayed with numbers.
+- Unordered List (`<ul>`): This list is used when the order of items doesn’t matter and is usually displayed with bullet points.
+- List Item (`<li>`): This tag is used to define an item in both ordered and unordered lists.
+
+Example:
+```html
+<!-- Unordered List -->
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<!-- Ordered List -->
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ol>
+```
+
+### Block and Inline Elements
+HTML elements are broadly classified into two categories: block-level and inline-level.
+
+- **Block-Level Elements**: These elements take up the full width of their container and start on a new line. Examples include `<div>`, `<p>`, `<h1>` to `<h6>`, `<ul>`, and `<table>`.
+- **Inline-Level Elements**: These elements take up only as much width as necessary and do not start on a new line. Examples include `<span>`, `<a>`, `<img>`, `<strong>`, and `<em>`.
+
+### `<div>` Element
+The `<div>` element is a block-level container often used to group other elements together to apply styles or to create layout sections. It's very versatile and commonly used in web development.
+
+Example:
+```html
+<div class="container">
+  <h1>Title</h1>
+  <p>This is a paragraph inside a div.</p>
+</div>
+```
+
+### Classes and IDs
+Classes and IDs are used to apply CSS styles and JavaScript functionality to HTML elements.
+
+- **Class**: Defined with the `class` attribute, classes are reusable and can be applied to multiple elements. They are denoted by a period `.` in CSS.
+
+Example:
+```html
+<p class="highlight">This is a highlighted paragraph.</p>
+```
+CSS:
+```css
+.highlight {
+  background-color: yellow;
+}
+```
+
+- **ID**: Defined with the `id` attribute, IDs are unique to a single element on a page. They are denoted by a hash `#` in CSS.
+
+Example:
+```html
+<p id="unique">This is a unique paragraph.</p>
+```
+CSS:
+```css
+#unique {
+  color: blue;
+}
+```
+
+
+
+### CSS Backgrounds
+CSS provides several properties to set the background of an element.
+
+- `background-color`: Sets the background color.
+- `background-image`: Sets a background image.
+- `background-repeat`: Controls how a background image is repeated.
+- `background-position`: Sets the initial position of a background image.
+- `background-size`: Specifies the size of the background image.
+- `background-attachment`: Determines whether the background image is fixed or scrolls with the page.
+
+Example:
+```css
+.element {
+  background-color: #f0f0f0;
+  background-image: url('image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+```
+
+### CSS Borders
+Borders can be used to set the border around an element.
+
+- `border`: A shorthand property to set the width, style, and color of a border.
+- `border-width`: Sets the width of the border.
+- `border-style`: Sets the style of the border (solid, dashed, dotted, etc.).
+- `border-color`: Sets the color of the border.
+- `border-radius`: Rounds the corners of an element's border.
+
+Example:
+```css
+.element {
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+```
+
+### CSS Margin
+Margins create space around elements, outside of any defined borders.
+
+- `margin`: A shorthand property for setting the margin on all four sides.
+- `margin-top`, `margin-right`, `margin-bottom`, `margin-left`: Individual properties for each side.
+
+Example:
+```css
+.element {
+  margin: 20px;
+}
+```
+
+### CSS Padding
+Padding creates space inside an element, between the content and the border.
+
+- `padding`: A shorthand property for setting the padding on all four sides.
+- `padding-top`, `padding-right`, `padding-bottom`, `padding-left`: Individual properties for each side.
+
+Example:
+```css
+.element {
+  padding: 15px;
+}
+```
+
+### CSS Height and Width
+These properties set the height and width of an element.
+
+- `height`: Sets the height of an element.
+- `width`: Sets the width of an element.
+
+Example:
+```css
+.element {
+  height: 100px;
+  width: 200px;
+}
+```
+
+### CSS Box Model
+The box model represents the structure of an HTML element, including content, padding, border, and margin.
+
+- **Content**: The innermost part where text and images appear.
+- **Padding**: Space between the content and the border.
+- **Border**: A line surrounding the padding (if any) and content.
+- **Margin**: Space outside the border.
+
+Example:
+```css
+.element {
+  width: 200px;
+  padding: 10px;
+  border: 5px solid #000;
+  margin: 20px;
+}
+```
+In this example, the total width of the element would be 250px (200px content + 20px padding + 10px border + 20px margin).
+
+### CSS Outline
+The outline is similar to the border but does not affect the size of the element or the box model. It's drawn outside the border edge.
+
+- `outline`: A shorthand property for setting the outline width, style, and color.
+- `outline-width`: Sets the width of the outline.
+- `outline-style`: Sets the style of the outline.
+- `outline-color`: Sets the color of the outline.
+- `outline-offset`: Specifies the space between the outline and the border edge.
+
+Example:
+```css
+.element {
+  outline: 2px dashed red;
+  outline-offset: 5px;
+}
+```
+
