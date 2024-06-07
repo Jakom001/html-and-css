@@ -690,3 +690,341 @@ Example:
 }
 ```
 
+### CSS Text
+CSS provides various properties to style text, including color, alignment, decoration, and transformation.
+
+- `color`: Sets the color of the text.
+- `text-align`: Aligns the text (left, right, center, justify).
+- `text-decoration`: Adds decoration to text (underline, overline, line-through).
+- `text-transform`: Controls the capitalization of text (uppercase, lowercase, capitalize).
+- `line-height`: Sets the space between lines of text.
+- `text-shadow`: Adds shadow to text.
+
+Example:
+```css
+.text {
+  color: #333;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-shadow: 2px 2px #888;
+}
+```
+
+### CSS Fonts
+CSS allows you to specify fonts and their styles.
+
+- `font-family`: Specifies the font family.
+- `font-size`: Sets the size of the font.
+- `font-weight`: Sets the weight of the font (boldness).
+- `font-style`: Sets the style of the font (normal, italic, oblique).
+- `font-variant`: Controls the use of small-caps font.
+
+Example:
+```css
+.text {
+  font-family: 'Arial, sans-serif';
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  font-variant: small-caps;
+}
+```
+
+### CSS Icons
+Icons can be added using icon libraries such as Font Awesome or by using custom images.
+
+- Using Font Awesome:
+  ```html
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <i class="fas fa-camera"></i>
+  ```
+
+- Using custom images:
+  ```html
+  <img src="icon.png" alt="Icon" class="icon">
+  ```
+  ```css
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+  ```
+
+### CSS Links
+Links can be styled using the `a` tag with different states: normal, visited, hover, and active.
+
+- `a`: Normal link state.
+- `a:visited`: Visited link state.
+- `a:hover`: Link state when hovered over.
+- `a:active`: Link state when clicked.
+
+Example:
+```css
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:active {
+  color: red;
+}
+```
+
+### CSS Lists
+Lists can be styled to change their appearance, including removing bullets or numbers, and setting custom styles.
+
+- `list-style-type`: Changes the bullet or numbering style (none, disc, circle, square, decimal, etc.).
+- `list-style-image`: Uses an image as the list item marker.
+- `list-style-position`: Specifies the position of the list-item markers (inside, outside).
+
+Example:
+```css
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
+.custom-list {
+  list-style-type: none;
+}
+
+.custom-list li {
+  background: url('custom-marker.png') no-repeat left center;
+  padding-left: 20px;
+}
+```
+
+### CSS Tables
+Tables can be styled to improve their appearance and readability.
+
+- `border-collapse`: Specifies whether table borders should collapse into a single border or be separated.
+- `border-spacing`: Sets the distance between the borders of adjacent cells.
+- `table-layout`: Specifies the layout algorithm (auto, fixed).
+- `width`: Sets the width of the table.
+- `text-align`: Aligns text in table cells.
+- `vertical-align`: Aligns the content vertically in a table cell.
+- `padding`: Adds padding to table cells.
+- `background-color`: Sets the background color of table elements.
+
+Example:
+```css
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+```
+
+### Summary
+- **Text**: Use properties like color, alignment, decoration, transformation, line-height, and shadow.
+- **Fonts**: Specify font family, size, weight, style, and variant.
+- **Icons**: Include using icon libraries or custom images.
+- **Links**: Style different link states (normal, visited, hover, active).
+- **Lists**: Customize list markers and positions.
+- **Tables**: Style table borders, spacing, layout, and cell content for better readability.
+
+
+### CSS Display
+The `display` property specifies how an element is displayed on the page.
+
+- `display: block`: The element is displayed as a block-level element (e.g., `<div>`, `<p>`).
+- `display: inline`: The element is displayed as an inline element (e.g., `<span>`, `<a>`).
+- `display: inline-block`: The element is displayed as an inline element but can have block-level properties (like width and height).
+- `display: none`: The element is not displayed at all (it’s removed from the document flow).
+- `display: flex`: The element becomes a flex container, and its children are flex items.
+- `display: grid`: The element becomes a grid container, and its children are grid items.
+
+Example:
+```css
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+```
+
+### CSS max-width
+The `max-width` property sets the maximum width of an element. It prevents the element from becoming wider than the specified value.
+
+Example:
+```css
+.container {
+  max-width: 100%;
+}
+
+.content {
+  max-width: 800px;
+}
+```
+
+### CSS Position
+The `position` property specifies the type of positioning method used for an element.
+
+- `position: static`: The default positioning; elements are positioned according to the normal flow of the document.
+- `position: relative`: The element is positioned relative to its normal position.
+- `position: absolute`: The element is positioned relative to the nearest positioned ancestor (not static).
+- `position: fixed`: The element is positioned relative to the browser window, and it stays fixed during scrolling.
+- `position: sticky`: The element is positioned based on the user's scroll position.
+
+Example:
+```css
+.static {
+  position: static;
+}
+
+.relative {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.absolute {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+```
+
+### CSS z-index
+The `z-index` property specifies the stack order of an element. It only works on positioned elements (relative, absolute, fixed, sticky).
+
+- Higher `z-index` values indicate that the element is in front of those with lower values.
+
+Example:
+```css
+.behind {
+  position: relative;
+  z-index: 1;
+}
+
+.in-front {
+  position: relative;
+  z-index: 2;
+}
+```
+
+### CSS Overflow
+The `overflow` property specifies what happens if content overflows an element's box.
+
+- `overflow: visible`: The overflow is not clipped. The content renders outside the element’s box.
+- `overflow: hidden`: The overflow is clipped, and the rest of the content is invisible.
+- `overflow: scroll`: The overflow is clipped, and a scrollbar is added to see the rest of the content.
+- `overflow: auto`: Similar to `scroll`, but scrollbars are added only when necessary.
+
+Example:
+```css
+.visible {
+  overflow: visible;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+.auto {
+  overflow: auto;
+}
+```
+
+### CSS Float
+The `float` property is used for positioning and formatting content by allowing elements to float to the left or right of their container.
+
+- `float: left`: Floats the element to the left.
+- `float: right`: Floats the element to the right.
+- `float: none`: The element does not float.
+
+To clear floated elements, use the `clear` property.
+
+Example:
+```css
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.none {
+  float: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+```
+
+### Summary
+- **Display**: Controls how an element is displayed (`block`, `inline`, `none`, `flex`, `grid`).
+- **max-width**: Sets the maximum width of an element.
+- **Position**: Controls the positioning method of an element (`static`, `relative`, `absolute`, `fixed`, `sticky`).
+- **z-index**: Controls the stack order of positioned elements.
+- **Overflow**: Specifies what happens when content overflows an element’s box (`visible`, `hidden`, `scroll`, `auto`).
+- **Float**: Allows elements to float to the left or right of their container and uses the `clear` property to manage float behavior.
+
