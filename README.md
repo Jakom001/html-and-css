@@ -1028,3 +1028,215 @@ Example:
 - **Overflow**: Specifies what happens when content overflows an element’s box (`visible`, `hidden`, `scroll`, `auto`).
 - **Float**: Allows elements to float to the left or right of their container and uses the `clear` property to manage float behavior.
 
+
+### CSS Flexbox
+
+Flexbox (Flexible Box Layout) is a CSS layout module designed to arrange and align items within a container efficiently. Flexbox makes it easier to design flexible and responsive layouts, allowing elements to adapt to different screen sizes and display devices.
+
+### Key Concepts
+
+#### 1. **Flex Container and Flex Items**
+- **Flex Container**: An element with `display: flex` or `display: inline-flex`.
+- **Flex Items**: The direct children of a flex container.
+
+```css
+.container {
+    display: flex; /* or inline-flex */
+}
+```
+
+### Flex Container Properties
+
+#### 2. **flex-direction**
+Defines the direction in which the flex items are placed in the flex container.
+
+- `row`: Default value. Items are placed in a row (left to right in ltr; right to left in rtl).
+- `row-reverse`: Items are placed in a row in reverse order (right to left in ltr; left to right in rtl).
+- `column`: Items are placed in a column (top to bottom).
+- `column-reverse`: Items are placed in a column in reverse order (bottom to top).
+
+```css
+.container {
+    flex-direction: row; /* row | row-reverse | column | column-reverse */
+}
+```
+
+#### 3. **flex-wrap**
+Specifies whether the flex items should wrap or not when there is not enough space.
+
+- `nowrap`: Default value. Items are placed in a single line.
+- `wrap`: Items wrap onto multiple lines.
+- `wrap-reverse`: Items wrap onto multiple lines in reverse order.
+
+```css
+.container {
+    flex-wrap: wrap; /* nowrap | wrap | wrap-reverse */
+}
+```
+
+#### 4. **flex-flow**
+A shorthand for `flex-direction` and `flex-wrap`.
+
+```css
+.container {
+    flex-flow: row wrap; /* <'flex-direction'> <'flex-wrap'> */
+}
+```
+
+#### 5. **justify-content**
+Aligns flex items along the main axis (horizontally if `flex-direction` is `row`).
+
+- `flex-start`: Default value. Items are aligned to the start of the container.
+- `flex-end`: Items are aligned to the end of the container.
+- `center`: Items are centered in the container.
+- `space-between`: Items are evenly distributed; the first item is at the start, the last item is at the end.
+- `space-around`: Items are evenly distributed with space around them.
+- `space-evenly`: Items are evenly distributed with equal space between them.
+
+```css
+.container {
+    justify-content: center; /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+}
+```
+
+#### 6. **align-items**
+Aligns flex items along the cross axis (vertically if `flex-direction` is `row`).
+
+- `stretch`: Default value. Items are stretched to fill the container.
+- `flex-start`: Items are aligned to the start of the cross axis.
+- `flex-end`: Items are aligned to the end of the cross axis.
+- `center`: Items are centered along the cross axis.
+- `baseline`: Items are aligned along their baselines.
+
+```css
+.container {
+    align-items: center; /* stretch | flex-start | flex-end | center | baseline */
+}
+```
+
+#### 7. **align-content**
+Aligns flex lines within the flex container when there is extra space along the cross axis.
+
+- `stretch`: Default value. Lines stretch to take up the remaining space.
+- `flex-start`: Lines are packed to the start of the container.
+- `flex-end`: Lines are packed to the end of the container.
+- `center`: Lines are centered in the container.
+- `space-between`: Lines are evenly distributed with the first line at the start and the last line at the end.
+- `space-around`: Lines are evenly distributed with space around them.
+- `space-evenly`: Lines are evenly distributed with equal space between them.
+
+```css
+.container {
+    align-content: space-around; /* stretch | flex-start | flex-end | center | space-between | space-around | space-evenly */
+}
+```
+
+### Flex Item Properties
+
+#### 8. **order**
+Specifies the order of a flex item relative to the other flex items. Default is 0.
+
+```css
+.item {
+    order: 1; /* default is 0 */
+}
+```
+
+#### 9. **flex-grow**
+Specifies how much a flex item will grow relative to the other flex items when there is extra space in the flex container. Default is 0.
+
+```css
+.item {
+    flex-grow: 2; /* default is 0 */
+}
+```
+
+#### 10. **flex-shrink**
+Specifies how much a flex item will shrink relative to the other flex items when there is not enough space in the flex container. Default is 1.
+
+```css
+.item {
+    flex-shrink: 1; /* default is 1 */
+}
+```
+
+#### 11. **flex-basis**
+Specifies the initial size of a flex item before any space distribution. It can be a length (px, em, etc.) or a percentage.
+
+```css
+.item {
+    flex-basis: 100px; /* default is auto */
+}
+```
+
+#### 12. **flex**
+A shorthand for `flex-grow`, `flex-shrink`, and `flex-basis`.
+
+```css
+.item {
+    flex: 1 1 100px; /* <flex-grow> <flex-shrink> <flex-basis> */
+}
+```
+
+#### 13. **align-self**
+Overrides the `align-items` property for a specific flex item, allowing for individual alignment.
+
+- `auto`: Default. Inherits the value from the `align-items` property of the flex container.
+- `flex-start`: Aligns the item to the start of the cross axis.
+- `flex-end`: Aligns the item to the end of the cross axis.
+- `center`: Centers the item along the cross axis.
+- `baseline`: Aligns the item along its baseline.
+- `stretch`: Stretches the item to fill the container.
+
+```css
+.item {
+    align-self: flex-end; /* auto | flex-start | flex-end | center | baseline | stretch */
+}
+```
+
+### Example
+
+Here is an example that demonstrates various flexbox properties:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            height: 200px;
+            border: 1px solid #ccc;
+        }
+        .item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+        }
+        .item:nth-child(2) {
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>
+```
+
+
+
